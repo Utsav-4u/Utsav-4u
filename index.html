@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utsav ❤️ Yashvi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to bottom, #ff99cc, #ffccff);
+    }
+    header h1 {
+      font-size: 3em;
+      color: #ff3399;
+    }
+
+    .stars, .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .star, .heart {
+      position: absolute;
+      animation: float 10s linear infinite;
+      opacity: 0.6;
+    }
+    .star::before, .heart::before {
+      content: '★';
+      color: #fff;
+      font-size: 20px;
+    }
+    .heart::before {
+      content: '❤';
+      color: #ff3366;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); }
+      100% { transform: translateY(-10vh) scale(1.2); }
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #cc0066;
+    }
+    .gallery img {
+      width: 200px;
+      height: auto;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .qna, .quote, .letter, .ending {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      color: #222;
+    }
+
+    button {
+      background-color: #ff66a3;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff3385;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="hearts"></div>
+
+  <header>
+    <h1>Happy Anniversary, My Love 💕</h1>
+    <p>Utsav ❤️ Yashvi | Together since June 25, 2019</p>
+  </header>
+
+  <section class="gallery">
+    <h2>Our Memories 📸</h2>
+    <img src="images/Snapchat-34400879.jpg" />
+    <img src="images/Snapchat-102371960.jpg" />
+    <img src="images/Snapchat-462477311.jpg" />
+    <img src="images/Snapchat-902251952.jpg" />
+    <img src="images/Snapchat-1070098607.jpg" />
+    <img src="images/Snapchat-1815948575.jpg" />
+    <img src="images/Snapchat-1928095232.jpg" />
+    <img src="images/Snapchat-1964347418.jpg" />
+    <img src="images/Snapchat-2142017686.jpg" />
+  </section>
+
+  <section class="qna">
+    <h2>Q&A Time 💬</h2>
+    <p><strong>Who said “I love you” first?</strong> Utsav did (but Yashvi felt it first 😊)</p>
+    <p><strong>When did we first kiss?</strong> June 19, 2020 💋</p>
+    <p><strong>Nicknames?</strong> Sweety, Babli</p>
+    <p><strong>What describes our love?</strong> Eternal 🌙☀️</p>
+    <p><strong>Our favorite number?</strong> 19 (Yashvi’s lucky charm!)</p>
+    <p><strong>What are we?</strong> The Moon & The Sun (lune.ux09 & sole.yx12)</p>
+  </section>
+
+  <section class="quote">
+    <h2>Quotes & Gestures 🌟</h2>
+    <p>“You are my moon, and I am your sun. Together we light up the sky.”</p>
+    <p>“Some loves are written in the stars. Ours was engraved in 19.”</p>
+    <button onclick="alert('🤗 A virtual hug from Utsav!')">🤗 Send a Hug</button>
+    <button onclick="alert('😘 A sweet kiss for you, Babli!')">😘 Send a Kiss</button>
+  </section>
+
+  <section class="letter">
+    <h2>My Letter to You 💌</h2>
+    <p>From the day we started — June 25, 2019 — my life felt brighter. You made me smile before I even knew you. Even though I said “I love you” first, I always felt you were the one pulling me into something incredible.</p>
+    <p>I’ll never forget our first kiss on June 19, 2020 — everything felt right. Since then, you’ve become my confidante, my moonlight, my constant.</p>
+    <p>I love every part of you — your voice, your sparkle, the way the number 19 feels lucky because of you, and the warmth that fills you when I call you Sweety or Babli.</p>
+    <p>You are my moon, and I am your sun — we complete the sky together. I promise to choose you, to nurture our love, and to chase every sunrise and sunset by your side.</p>
+    <p>Forever yours,<br/>Utsav (your Sole ☀️)</p>
+  </section>
+
+  <section class="ending">
+    <h2>I love you, always. Here’s to forever 💫</h2>
+  </section>
+
+  <script>
+    function spawnParticles(className) {
+      for (let i = 0; i < 30; i++) {
+        const el = document.createElement('div');
+        el.className = className;
+        el.style.left = Math.random() * 100 + '%';
+        el.style.top = Math.random() * 100 + '%';
+        el.style.animationDuration = 5 + Math.random() * 5 + 's';
+        document.querySelector(`.${className}s`).appendChild(el);
+      }
+    }
+    spawnParticles('star');
+    spawnParticles('heart');
+  </script>
+</body>
+</html>
