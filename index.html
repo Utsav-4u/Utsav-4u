@@ -92,6 +92,32 @@
     button:hover {
       background-color: #ff3385;
     }
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.card {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  color: #222;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
   </style>
 </head>
 <body>
@@ -116,7 +142,8 @@
     <img src="images/Snapchat-2142017686.jpg" />
   </section>
 
-  <section class="qna">
+  <section class="content-section">
+  <div class="card qna">
     <h2>Q&A Time 💬</h2>
     <p><strong>Who said “I love you” first?</strong> Utsav did (but Yashvi felt it first 😊)</p>
     <p><strong>When did we first kiss?</strong> June 19, 2020 💋</p>
@@ -124,30 +151,32 @@
     <p><strong>What describes our love?</strong> Eternal 🌙☀️</p>
     <p><strong>Our favorite number?</strong> 19 (Yashvi’s lucky charm!)</p>
     <p><strong>What are we?</strong> The Moon & The Sun (lune.ux09 & sole.yx12)</p>
-  </section>
+  </div>
 
-  <section class="quote">
+  <div class="card quote">
     <h2>Quotes & Gestures 🌟</h2>
     <p>“You are my moon, and I am your sun. Together we light up the sky.”</p>
     <p>“Some loves are written in the stars. Ours was engraved in 19.”</p>
     <button onclick="alert('🤗 A virtual hug from Utsav!')">🤗 Send a Hug</button>
     <button onclick="alert('😘 A sweet kiss for you, Babli!')">😘 Send a Kiss</button>
-  </section>
+  </div>
 
-  <section class="letter">
+  <div class="card letter">
     <h2>My Letter to You 💌</h2>
     <p>From the day we started — June 25, 2019 — my life felt brighter. You made me smile before I even knew you. Even though I said “I love you” first, I always felt you were the one pulling me into something incredible.</p>
     <p>I’ll never forget our first kiss on June 19, 2020 — everything felt right. Since then, you’ve become my confidante, my moonlight, my constant.</p>
     <p>I love every part of you — your voice, your sparkle, the way the number 19 feels lucky because of you, and the warmth that fills you when I call you Sweety or Babli.</p>
     <p>You are my moon, and I am your sun — we complete the sky together. I promise to choose you, to nurture our love, and to chase every sunrise and sunset by your side.</p>
     <p>Forever yours,<br/>Utsav (your Sole ☀️)</p>
-  </section>
+  </div>
+</section>
+
 
   <section class="ending">
     <h2>I love you, always. Here’s to forever 💫</h2>
   </section>
 
-  <script>
+  <script>	
     function spawnParticles(className) {
       for (let i = 0; i < 30; i++) {
         const el = document.createElement('div');
